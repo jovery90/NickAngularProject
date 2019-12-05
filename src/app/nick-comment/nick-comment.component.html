@@ -1,0 +1,19 @@
+<div class="container" >
+
+  <h1>Comments About Nick:</h1>
+  <br>
+  <br>
+  <div *ngFor="let item of items">
+  <h2>
+    {{ this.item.description }}</h2>
+    <button (click)="removeComment(this.item)" >Remove</button>
+  <br>
+
+  </div>
+
+  <br>
+  <br>
+
+  <button (click)="clearComments()">Clear Comments</button>
+
+  </div>

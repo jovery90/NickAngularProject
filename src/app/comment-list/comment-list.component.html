@@ -1,0 +1,12 @@
+<div class="flex-container">
+
+  <div style="flex-basis: 800px;" *ngFor="let product of products">
+
+    <h1>{{ product.description }}</h1>
+    <p>Author: {{ product.author }}</p>
+    <button (click)="addToComments(product)">Add</button>
+    <br><br><br>
+  </div>
+
+
+  </div>
