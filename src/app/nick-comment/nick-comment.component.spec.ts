@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommentService } from '../comment.service';
 import { NickCommentComponent } from './nick-comment.component';
 
 describe('NickCommentComponent', () => {
@@ -8,7 +8,8 @@ describe('NickCommentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NickCommentComponent ]
+      declarations: [ NickCommentComponent ],
+      providers: [CommentService],
     })
     .compileComponents();
   }));
@@ -22,4 +23,13 @@ describe('NickCommentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should clear item list when clearAll() is called', () => {
+
+    component.items = ['a'];
+    expect(component.items).toContain('a');
+    component.clearAll();
+    expect(component.items).not.toContain('a');
+  });
+
 });

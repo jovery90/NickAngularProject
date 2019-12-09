@@ -2,13 +2,18 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommentListComponent } from './comment-list.component';
 
+import { CommentService } from '../comment.service';
+
 describe('CommentListComponent', () => {
   let component: CommentListComponent;
   let fixture: ComponentFixture<CommentListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommentListComponent ]
+      declarations: [
+        CommentListComponent,
+      ],
+      providers: [CommentService],
     })
     .compileComponents();
   }));

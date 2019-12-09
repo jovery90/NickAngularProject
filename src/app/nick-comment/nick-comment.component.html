@@ -1,6 +1,6 @@
 <div class="container" >
 
-  <h1>Comments About Nick:</h1>
+  <h1>Comments About Nick: ({{ items.length }})</h1>
   <br>
   <br>
   <div *ngFor="let item of items">
@@ -14,6 +14,6 @@
   <br>
   <br>
 
-  <button (click)="clearComments()">Clear Comments</button>
+  <button (click)="clearAll()">Clear Comments</button>
 
   </div>

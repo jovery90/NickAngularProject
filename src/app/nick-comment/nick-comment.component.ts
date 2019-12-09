@@ -11,7 +11,7 @@ export class NickCommentComponent implements OnInit {
   products = products;
   items;
 
-  clearComments() {
+  clearAll() {
     this.commentService.clearComments();
     this.items = [];
     return this.items;
@@ -19,8 +19,8 @@ export class NickCommentComponent implements OnInit {
 
   removeComment(product) {
     this.commentService.removeComment(product);
-    window.alert('Comment removed!' )
-    console.log('The comment entitled--', product.description,'--has been removed')
+    window.alert('Comment removed!' );
+    console.log('The comment entitled--', product.description,'--has been removed');
     return this.items;
   }
 

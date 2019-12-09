@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 
 import { TopNavbarComponent } from './top-navbar.component';
+import { LandingPageComponent } from '../landing-page/landing-page.component';
+import { NickCommentComponent } from '../nick-comment/nick-comment.component';
+import { CommentListComponent } from '../comment-list/comment-list.component';
 
 describe('TopNavbarComponent', () => {
   let component: TopNavbarComponent;
@@ -8,7 +12,10 @@ describe('TopNavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopNavbarComponent ]
+      imports: [RouterTestingModule],
+      declarations: [
+        TopNavbarComponent,
+       ],
     })
     .compileComponents();
   }));

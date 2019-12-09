@@ -1,9 +1,10 @@
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {RouterModule, Routes} from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { BasePageComponent } from './base-page/base-page.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
@@ -30,6 +31,6 @@ import { CommentService } from './comment.service';
     TopNavbarComponent
   ],
   providers: [CommentService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
